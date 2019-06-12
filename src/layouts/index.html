@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/vendor.css" rel="stylesheet" />
+
+        <!-- This is the compiled Less -->
+        <link href="css/custom-less.css" rel="stylesheet" />
+
+        <!-- This is the compiled Sass -->
+        <link href="css/custom-sass.css" rel="stylesheet" />
+
+        <title></title>
+    </head>
+
+    <body ng-app="jh-app">
+
+        <div ng-controller="jhController as vm" >
+        <ui-view>
+            
+        </ui-view>
+
+        </div>
+        <script src="js/vendor.js"></script>
+
+        <script src="js/lib.js"></script>
+        <script src="routes.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
