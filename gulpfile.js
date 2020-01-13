@@ -61,7 +61,8 @@ gulp.task('js:custom', function () {
 })
 
 gulp.task('js:vendor', function () {
-    return gulp.src(['node_modules/lodash/lodash.min.js',
+    return gulp.src([
+    'node_modules/lodash/lodash.min.js',
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/angular/angular.min.js',
     'node_modules/@uirouter/angularjs/release/angular-ui-router.min.js',   
@@ -71,14 +72,7 @@ gulp.task('js:vendor', function () {
     .pipe(gulp.dest('./dist/js'))
 })
 
-gulp.task('js:lib', function () {
-    return gulp.src(['./src/lib/mask-ssn-input-jquery-plugin.js',
-    ])
-    .pipe(concat('lib.js'))
-    .pipe(gulp.dest('./dist/js'))
-})
-
-gulp.task('js', ['js:vendor', 'js:custom','js:lib'])
+gulp.task('js', ['js:vendor', 'js:custom'])
 gulp.task('less', ['less:customLess'])
 gulp.task('sass', ['sass:customSass'])
 
